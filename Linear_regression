@@ -20,7 +20,7 @@ def w_calculator(x, y):
     w0 = (sum(x*x)*sum(y) - sum(x)*sum(x*y))/(n*sum(x*x)-sum(x)*sum(x))
     return w0, w1
 
-#测试
+#testlalal
 w0 = w_calculator(x, y)[0]
 w1 = w_calculator(x, y)[1]
 
