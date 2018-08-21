@@ -29,3 +29,12 @@ print(model.get_params(True)) #{'copy_X': True, 'fit_intercept': True, 'n_jobs':
 
 #遗留问题，最小二乘法的算法复杂度。
 # 假设影响因素 x 为一个 n 行 p 列的矩阵那么其算法复杂度为O(np^2) 假设n >= p
+
+
+# 使用矩阵进行并行化运算
+x = np.matrix([[1,56], [1,72], [1,69], [1,88], [1,102], [1,86],[1, 76], [1,79], [1,94], [1,74]])
+y = np.matrix([92, 102, 86, 110, 130, 99, 96, 102, 105, 92])
+
+model = LinearRegression()
+model.fit(x, y.T)  # 转置列向量
+print(model.intercept_, model.coef_)
